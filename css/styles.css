@@ -1,0 +1,512 @@
+html {
+    font-size: 62.5%; /* Reset para rems 62.5%= 10px por 16px */
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/* Globales*/
+img {
+    max-width: 100%;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1{
+font-size: 3.8rem;    
+}
+h2{
+font-size: 3.4rem; 
+}
+h3{
+  font-size: 3rem; 
+}
+
+h4{
+font-size:2.6rem;
+}
+/* Utilidades*/
+
+.fw-300{
+    font-weight: 300;;
+}
+.centrar-texto{
+    text-align: center;
+}
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.d-block{
+    display:block!important ;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+/* Botones*/
+
+.boton {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.8rem  ;
+    padding : 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block; /* Enlaces e imagenes se usa */
+    /*width: 10px;*/
+    text-align: center;
+    border:none;
+    display: block;
+    flex: 0 0 100%;
+
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display:inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton-amarillo{
+    background-color: #e08709;
+    color:white;
+}
+
+.boton-verde{
+    background-color: #71b100;
+    color:white;
+}
+
+/* Asi se comenta callao
+        Header*/
+.header-sitio{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;  
+
+}
+.header-sitio.inicio {
+    background: url(../img/header.jpg); /*.. es para salir de la carpeta css*/
+    background-position: center center;
+    background-size: cover;
+    height: 100vh; /* Para que se ajuste a cada monitor*/
+    
+    min-height: 60rem;
+}
+
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+@media (min-width: 768px) {
+    .contenido-header{
+        text-align: left;
+    }
+}
+
+.contenido-header h1{
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    
+}
+
+.barra {
+     /* Para centrar , o sea para q este proporcional lgm */ 
+    padding-top:3rem;
+    
+    
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.navegacion a {
+    color:white;
+    text-decoration: none;
+    font-size:2.2rem;
+    display: block;
+
+}
+
+@media (min-width:768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size:1.8rem;
+
+
+    }
+    .navegacion a:last-of-type{
+        margin-right: 0;
+    }
+    
+}
+
+.navegacion a:hover{
+    color:green;
+}
+
+/* mobile menu */
+.mobile-menu img{
+    width: 5rem;
+} 
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+
+@media (min-width: 768px) {
+    .navegacion {
+    display: block;
+    }
+}
+
+
+
+@media (min-width:768px ) {
+    .iconos-nosotros{
+        display:flex; 
+        justify-content: space-evenly;
+    }
+}
+
+
+.icono{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono{
+        flex-basis: calc(33.3% - 1rem);
+
+    }
+}
+
+.icono h3{
+    text-transform: uppercase;
+}
+
+/* Anuncios */
+
+
+@media (min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+       
+    }
+
+}
+
+
+.anuncio{
+    margin-bottom: 2rem;
+    /* flex: groud shrink basis .... en ese orden va papiii 
+    el de shrink achicar , el de groud agrandar jajaj re obvio*/
+    flex-shrink: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B5B5B5;
+    /* pODEMOS PONER BORDER: 1px solid #safass  */ 
+    background: #F5F5F5;
+}
+ @media (min-width:768px ) {
+     .anuncio{
+    flex-basis: calc(33.3% - 1rem);
+
+     }
+ }
+.contenido-anuncio{
+    padding: 2rem; 
+}
+
+.contenido-anuncio h3 , .contenido-anuncio p{
+    margin: 0;
+}
+
+.precio{
+    color:#71b100;
+    font-weight: 700;
+} 
+
+.iconos-caracteristicas{
+    list-style: none;
+    padding:0;
+    display:flex;
+    justify-content: space-evenly;
+
+     
+}
+.iconos-caracteristicas li {
+   /* flex:1;*/
+    display:flex;
+    
+}
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end ;
+}
+
+/** Encuentra HOME **/
+
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    height: 40rem;
+    background-position: center center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+}
+
+.contenido-contacto{
+   /* flex:1; /* Para dividir el tamanho entre los elementos!! */
+   flex: 0 0 95% ;/* para que no tome todo el espacio */ 
+   color:white;  
+} 
+
+.contenido-contacto p {
+    font-size:1.8rem;
+}
+
+/** SECCION INFERIOR **/ 
+
+
+@media (min-width:768px ) {
+    .seccion-inferior {
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .seccion-inferior .blog{
+        flex-basis: 60%;
+    }
+    
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
+      
+}
+ 
+.entrada-blog{
+    
+    margin-bottom: 2rem ;
+} 
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex; 
+    justify-content: space-between ;
+    }
+
+    .entrada-blog:last-of-type{ 
+        margin-bottom: 0;
+    }
+    
+}
+
+
+
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%; 
+    }
+    
+    .entrada-blog .texto-entrada{
+        flex-basis: calc(60% - 3rem); 
+    }
+    
+}
+.texto-entrada a {
+    color:black;
+    text-decoration: none;
+}
+.texto-entrada h4 {
+    margin: 0; 
+    line-height: 1.2; 
+}
+
+.texto-entrada h4::after {
+    content:'';
+    display:block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+
+}
+
+.texto-entrada span {
+    color: orangered;
+}
+
+.testimonial {
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color:white;
+    border-radius:2rem;
+
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote::before {
+    content:'';
+    background-image: url(../img/comilla.svg);
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/*** FOOOTERRR ***/
+
+.site-footer{
+   background-color: #333333; 
+   margin:0;
+}
+
+.contenedor-footer{
+    padding: 3rem 0 ;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+/* algunos ocultan el nav en el footer con display none */
+.copyright{
+    margin:0;
+    color:white ;
+}
+
+
+/** INTERNAS AMIGOOOO RE CEBADO JAJAJA **/
+
+/** VAMO A DARLEEEEEEEEEE NANANANANANANANAN**/
+
+
+@media (min-width:768px ) {
+
+    .contenido-nosotros {
+        display:grid ;
+        grid-template-columns: 50% 50%; /** amigo se puede usar 1fr 1fr habla
+        de fracciones nteaa **/
+        grid-column-gap: 2rem;
+    
+    }
+
+}
+
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin:0;
+    padding: 1rem 0 2rem 0;
+}
+
+/**CONTACTO **/
+form p{
+    font-size: 1.4rem;
+    margin: 2rem 0 0 0 ;
+}
+legend{
+    font-size: 2.2rem;
+    color: #4f4f4f;
+}
+label {
+    display:block; /* q tome todo el espacio */
+    font-weight: 700;
+    text-transform: uppercase;
+} 
+/* Con clases en cada input tenes mas control! pero ahora no usamos */ 
+/*input[type="text"],
+input[type="email"] /*  pa poner los mismos atributos a ambos rey*/ 
+  
+input:not([type="submit"]),textarea,select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color:#e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+input[type="radio"]{
+    width: auto; /* solo lq necesita  */
+    margin:0;
+}
+
+select{
+    -webkit-appearance: none;
+    appearance: none;
+    
+}
+textarea{
+    height: 20rem;
+}
+
+.forma-contacto{
+    max-width: 30rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
